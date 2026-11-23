@@ -63,3 +63,6 @@ footer{color:var(--muted);font:14px system-ui,sans-serif;padding:24px 22px 40px;
   .row .fig{aspect-ratio:var(--ar)}
   .video{width:100%!important}
 }
+.has-cover{position:relative}
+.has-cover .cover{position:absolute;left:calc(100% + 36px);width:240px;top:50%;transform:translateY(-50%)}
+@media(max-width:760px){.has-cover .cover{position:static;display:block;transform:none;width:200px;margin-top:10px}}
