@@ -27,7 +27,7 @@ h3{font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;text-transf
 .gallery .fig img{aspect-ratio:4/3;object-fit:cover}
 figure{margin:0}
 figcaption{font:13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted);margin-top:5px}
-.video{margin:18px 0}.video video{width:100%;max-width:720px;border-radius:4px;background:#000}
+.video video{width:100%;border-radius:4px;background:#000}
 .pubs{list-style:none;padding:0;margin:0}
 .pubs li{display:grid;grid-template-columns:90px 1fr;gap:12px;margin:0 0 12px;font-size:.95rem}
 .pubs.plain li{display:block}
@@ -46,3 +46,20 @@ figcaption{font:13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var
 footer{color:var(--muted);font:14px system-ui,sans-serif;padding:24px 22px 40px;border-top:1px solid var(--line)}
 .lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
 .lb img{max-width:94vw;max-height:92vh;box-shadow:0 0 30px rgba(0,0,0,.5)}
+/* Layouts copied from the original Wix pages */
+.collage{position:relative;margin:22px auto;max-width:100%}
+.collage .fig{position:absolute}
+.collage .fig img,.row .fig img{width:100%;height:100%;object-fit:cover}
+.row{display:grid;gap:12px;margin:12px 0}
+.row .fig{position:relative;min-width:0}
+.fig{position:relative}
+.credit{position:absolute;left:8px;bottom:6px;color:#fff;font:12px/1.3 system-ui,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.video{margin:22px auto;max-width:100%}
+.video video{max-width:100%;display:block}
+@media(max-width:640px){
+  .collage{width:100%!important;aspect-ratio:auto!important;display:grid;gap:10px}
+  .collage .fig{position:relative;left:auto!important;top:auto!important;width:100%!important;height:auto!important;aspect-ratio:var(--ar)}
+  .row{grid-template-columns:1fr!important;aspect-ratio:auto!important}
+  .row .fig{aspect-ratio:var(--ar)}
+  .video{width:100%!important}
+}
